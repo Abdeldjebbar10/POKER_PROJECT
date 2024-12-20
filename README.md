@@ -62,20 +62,34 @@ Lors de la création d'une partie, il est nécessaire d'uploader un fichier .JSO
 
 [
     {
-        "id": 20,
-        "name": "Authentification des utilisateurs ",
-        "description": "Permettre à un utilisateur de se connecter avec un email et un mot de passe ."
-    },
+        "id": 20,  
+        
+        "name": "Authentification des utilisateurs ",     
+        
+        "description": "Permettre à un utilisateur de se connecter avec un email et un mot de passe ."    
+        
+    },   
+    
     {
-        "id": 21,
-        "name": "Création d'une page de profil ",
-        "description": "Permettre aux utilisateurs de visualiser et modifier leurs informations personnelles."
-    },
-    {
-        "id": 22,
-        "name": "Gestion des notifications ",
-        "description": "Envoyer des notifications par email aux utilisateurs pour les événements importants ."
+        "id": 21,    
+        
+        "name": "Création d'une page de profil ",    
+        
+        "description": "Permettre aux utilisateurs de visualiser et modifier leurs informations personnelles."    
+        
+    },   
+    
+    {    
+        "id": 22,   
+        
+        "name": "Gestion des notifications ",    
+        
+        "description": "Envoyer des notifications par email aux utilisateurs pour les événements importants ."   
+        
     }
+
+
+    
 ]
 
 Vous pouvez utiliser des fichiers avec les extensions suivantes :
