@@ -1,12 +1,70 @@
 [
     {
-        "name": "Feature 1",
-        "description": "A test feature",
+        "name": "Authentification des utilisateurs",
+        "description": "Permettre \u00e0 un utilisateur de se connecter avec un email et un mot de passe.",
+        "moyenne_difficulte": 0,
+        "votes": []
+    },
+    {
+        "name": " Cr\u00e9ation d'une page de profil",
+        "description": "Permettre aux utilisateurs de visualiser et modifier leurs informations personnelles.",
+        "moyenne_difficulte": 0,
+        "votes": []
+    },
+    {
+        "name": "Gestion des notifications",
+        "description": "Envoyer des notifications par email aux utilisateurs pour les \u00e9v\u00e9nements importants.",
+        "moyenne_difficulte": 0,
+        "votes": []
+    },
+    {
+        "name": " Cr\u00c3\u00a9ation d'une page de profil",
+        "description": "Permettre aux utilisateurs de visualiser et modifier leurs informations personnelles.",
+        "moyenne_difficulte": 0,
+        "votes": []
+    },
+    {
+        "name": "Authentification des utilisateurs (-_-)",
+        "description": "Permettre \u00c3\u00a0 un utilisateur de se connecter avec un email et un mot de passe.",
         "moyenne_difficulte": 0,
         "votes": [
             {
-                "participant": "JohnDoe",
+                "participant": "p3",
                 "vote": "5"
+            },
+            {
+                "participant": "tbh",
+                "vote": "5"
+            }
+        ]
+    },
+    {
+        "name": " Cr\u00c3\u00a9ation d'une page de profil(-_-)",
+        "description": "Permettre aux utilisateurs de visualiser et modifier leurs informations personnelles(-_-).",
+        "moyenne_difficulte": 0,
+        "votes": [
+            {
+                "participant": "p3",
+                "vote": "100"
+            },
+            {
+                "participant": "tbh",
+                "vote": "100"
+            }
+        ]
+    },
+    {
+        "name": "Gestion des notifications(-_-)",
+        "description": "Envoyer des notifications par email aux utilisateurs pour les \u00c3\u00a9v\u00c3\u00a9nements importants(-_-).",
+        "moyenne_difficulte": 0,
+        "votes": [
+            {
+                "participant": "p3",
+                "vote": "100"
+            },
+            {
+                "participant": "tbh",
+                "vote": "100"
             }
         ]
     }

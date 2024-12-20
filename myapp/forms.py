@@ -10,6 +10,7 @@ class PartieForm(forms.ModelForm):
     administrateur = forms.ModelChoiceField(queryset=Participant.objects.filter(est_admin=True), required=True)
     participants = forms.ModelMultipleChoiceField(queryset=Participant.objects.all(), widget=forms.CheckboxSelectMultiple)
     fonctionnalites_json = forms.FileField(required=False)  # Champ pour importer le fichier JSON
+    fichier_json = forms.FileField(required=False, label="Fichier JSON (optionnel)")
 
     class Meta:
         model = Partie

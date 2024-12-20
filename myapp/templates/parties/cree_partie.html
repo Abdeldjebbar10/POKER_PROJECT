@@ -7,7 +7,7 @@
     {% if success_message %}
         <div class="alert alert-success">{{ success_message }}</div>
     {% endif %}
-    <form method="post" class="mt-3">
+    <form method="post" enctype="multipart/form-data" class="mt-3">
         {% csrf_token %}
         <div class="mb-3">
             <label for="id_nom" class="form-label">Nom de la partie :</label>
@@ -30,7 +30,13 @@
                 {{ form.participants }}
             </div>
         </div>
-    
+        <div class="mb-3">
+            <label for="id_fichier_json" class="form-label">Uploader un fichier JSON (optionnel) :</label>
+            <input type="file" name="fichier_json" id="id_fichier_json" class="form-control">
+            <div class="text-danger">
+                {{ form.fichier_json.errors }}
+            </div>
+        </div>
         <button type="submit" class="btn btn-success">Créer la Partie</button>
     </form>
     <a href="{% url 'lister_parties' %}" class="btn btn-secondary mt-3">Retour à la liste des parties</a>
@@ -38,13 +44,13 @@
         document.addEventListener('DOMContentLoaded', function () {
             const adminSelect = document.getElementById('id_administrateur'); // Sélecteur pour l'administrateur
             const participantCheckboxes = document.querySelectorAll('#id_participants input[type="checkbox"]'); // Sélecteur pour les cases des participants
-        
+
             function updateParticipants() {
                 const selectedAdmin = adminSelect.value; // Récupère la valeur de l'administrateur sélectionné
-        
+
                 // Si aucun administrateur n'est sélectionné, on quitte la fonction
                 if (!selectedAdmin) return;
-        
+
                 // Parcourt les cases à cocher des participants
                 participantCheckboxes.forEach(function (checkbox) {
                     if (checkbox.value === selectedAdmin) {
@@ -55,17 +61,12 @@
                     }
                 });
             }
-        
+
             // Ajoute un événement pour mettre à jour les participants lorsque l'administrateur change
             adminSelect.addEventListener('change', updateParticipants);
-        
+
             // Met à jour les participants au chargement initial
             updateParticipants();
         });
-        </script>
-        
+    </script>
 {% endblock %}
-
-
-
-

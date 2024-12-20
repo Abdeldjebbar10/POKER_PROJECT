@@ -3,6 +3,8 @@ from django.http import JsonResponse
 from django.conf import settings
 from django.contrib.staticfiles import finders
 from django.utils import timezone
+from django.core.files.storage import default_storage
+from django.core.files.base import ContentFile
 import time
 from .models import Partie, Fonctionnalite, Vote, ValidationFonctionnalite, Participant
 from .forms import PartieForm, VoteForm, ParticipantForm
@@ -20,6 +22,7 @@ def liste_parties(request):
     parties = Partie.objects.all()
     return render(request, 'parties/liste_parties.html', {'parties': parties})
 
+
 def creer_partie(request):
     """
     @fn creer_partie
@@ -27,10 +30,10 @@ def creer_partie(request):
     @param request Objet de requête HTTP.
     @return Réponse HTTP après la création de la partie.
     """
-    fichier_json = finders.find('data/backlog.json')  # Chemin vers le fichier JSON
+    fichier_static_path = os.path.join('static', 'data', 'backlog.json')  # Chemin vers le fichier JSON final
 
     if request.method == 'POST':
-        form = PartieForm(request.POST)
+        form = PartieForm(request.POST, request.FILES)  # Accepte les fichiers
         if form.is_valid():
             # Traitez la partie et les participants
             partie = form.save(commit=False)
@@ -47,26 +50,38 @@ def creer_partie(request):
             partie.participants.set(participants)
             form.save_m2m()
 
-            # Importer ou mettre à jour les fonctionnalités
-            with open(fichier_json, 'r') as file:
-                data = json.load(file)
-                noms_fonctionnalites = [item['name'] for item in data]
+            # Vérifiez si un fichier a été uploadé
+            uploaded_file = request.FILES.get('fichier_json')
+            if uploaded_file:
+                # Écrase le fichier existant avec le nouveau
+                full_path = os.path.join('static', 'data', 'backlog.json')
+                if os.path.exists(full_path):
+                    os.remove(full_path)  # Supprime le fichier existant
+                with open(full_path, 'wb') as f:
+                    for chunk in uploaded_file.chunks():
+                        f.write(chunk)
 
-                # Mettre à jour les fonctionnalités existantes
-                for fonctionnalite in Fonctionnalite.objects.all():
-                    if fonctionnalite.name in noms_fonctionnalites:
-                        fonctionnalite.valide = False  # Remettre à non valide
-                        fonctionnalite.save()
+            # Importer ou mettre à jour les fonctionnalités depuis backlog.json
+            if os.path.exists(fichier_static_path):
+                with open(fichier_static_path, 'r') as file:
+                    data = json.load(file)
+                    noms_fonctionnalites = [item['name'] for item in data]
 
-                # Ajouter les nouvelles fonctionnalités
-                for item in data:
-                    fonctionnalite, created = Fonctionnalite.objects.get_or_create(
-                        name=item['name'],
-                        defaults={'description': item['description']}
-                    )
-                    if created:
-                        fonctionnalite.valide = False  # Par défaut, non valide
-                        fonctionnalite.save()
+                    # Mettre à jour les fonctionnalités existantes
+                    for fonctionnalite in Fonctionnalite.objects.all():
+                        if fonctionnalite.name in noms_fonctionnalites:
+                            fonctionnalite.valide = False  # Remettre à non valide
+                            fonctionnalite.save()
+
+                    # Ajouter les nouvelles fonctionnalités
+                    for item in data:
+                        fonctionnalite, created = Fonctionnalite.objects.get_or_create(
+                            name=item['name'],
+                            defaults={'description': item['description']}
+                        )
+                        if created:
+                            fonctionnalite.valide = False  # Par défaut, non valide
+                            fonctionnalite.save()
 
             # Associer toutes les fonctionnalités à la partie
             toutes_fonctionnalites = Fonctionnalite.objects.all()
@@ -82,6 +97,7 @@ def creer_partie(request):
         form = PartieForm()
 
     return render(request, 'parties/cree_partie.html', {'form': form})
+
 
 def detail_partie(request, id):
     """

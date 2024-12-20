@@ -1,20 +1,52 @@
 {
-    "partie": "Game Night",
-    "statut": "new",
+    "partie": "tabouhi",
+    "statut": "en_attente",
     "fonctionnalites": [
         {
-            "name": "Feature 1",
-            "description": "A test feature",
+            "name": "Authentification des utilisateurs",
+            "description": "Permettre \u00e0 un utilisateur de se connecter avec un email et un mot de passe.",
             "valide": true,
             "votes": [
                 {
-                    "participant": "JohnDoe",
-                    "vote": "5"
+                    "participant": "p3",
+                    "vote": "0"
+                },
+                {
+                    "participant": "tbh",
+                    "vote": "0"
                 }
             ]
+        },
+        {
+            "name": " Cr\u00e9ation d'une page de profil",
+            "description": "Permettre aux utilisateurs de visualiser et modifier leurs informations personnelles.",
+            "valide": true,
+            "votes": []
+        },
+        {
+            "name": "Gestion des notifications",
+            "description": "Envoyer des notifications par email aux utilisateurs pour les \u00e9v\u00e9nements importants.",
+            "valide": false,
+            "votes": [
+                {
+                    "participant": "p3",
+                    "vote": "cafe"
+                },
+                {
+                    "participant": "tbh",
+                    "vote": "cafe"
+                }
+            ]
+        },
+        {
+            "name": " Cr\u00c3\u00a9ation d'une page de profil",
+            "description": "Permettre aux utilisateurs de visualiser et modifier leurs informations personnelles.",
+            "valide": false,
+            "votes": []
         }
     ],
     "participants": [
-        "JohnDoe"
+        "p3",
+        "tbh"
     ]
 }
