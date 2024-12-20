@@ -57,6 +57,9 @@ python manage.py createsuperuser  # Optionnel
 # Lancez le serveur
 python manage.py runserver
 
+Ouvrez votre navigateur et allez à l'adresse http://127.0.0.1:8000/
+
+
 #  Ajout de fichiers pour la création de parties
 Lors de la création d'une partie, il est nécessaire d'uploader un fichier .JSON ou txt contenant les détails des fonctionnalités. Par exemple :
 
