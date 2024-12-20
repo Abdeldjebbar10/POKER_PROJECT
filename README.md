@@ -116,7 +116,8 @@ cd POKER_PROJECT
 
 # Créez et activez l'environnement virtuel
 python -m venv env
-source env/bin/activate  # ou env\Scripts\activate pour Windows
+source env/bin/activate  #
+ou env\Scripts\activate pour Windows
 
 # Installez les dépendances
 pip install -r requirements.txt
