@@ -117,7 +117,7 @@ cd POKER_PROJECT
 # Créez et activez l'environnement virtuel
 pour creer : 
 python -m venv env
-pour activer:
+pour activer :   
 Sur Windows :  
 env\Scripts\activate  
 Sur macOS/Linux :  
