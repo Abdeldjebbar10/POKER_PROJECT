@@ -6,12 +6,12 @@
     },
     {
         "id": 21,
-        "name": " Création d'une page de profil(-_-)",
+        "name": " Création d'une page de profil",
         "description": "Permettre aux utilisateurs de visualiser et modifier leurs informations personnelles."
     },
     {
         "id": 22,
-        "name": "Gestion des notifications(-_-)",
+        "name": "Gestion des notifications",
         "description": "Envoyer des notifications par email aux utilisateurs pour les événements importants."
     }
 ]
