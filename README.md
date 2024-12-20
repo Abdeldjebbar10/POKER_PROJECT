@@ -60,7 +60,11 @@ python manage.py runserver
 #  Ajout de fichiers pour la création de parties
 Lors de la création d'une partie, il est nécessaire d'uploader un fichier .JSON ou txt contenant les détails des fonctionnalités. Par exemple :
 
+
+
 [
+
+
     {
         "id": 20,  
         
