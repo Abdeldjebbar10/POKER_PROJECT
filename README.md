@@ -57,7 +57,7 @@ python manage.py createsuperuser  # Optionnel
 # Lancez le serveur
 python manage.py runserver
 
-Ajout de fichiers pour la création de parties
+#  Ajout de fichiers pour la création de parties
 Lors de la création d'une partie, il est nécessaire d'uploader un fichier .JSON ou txt contenant les détails des fonctionnalités. Par exemple :
 
 [
@@ -86,7 +86,10 @@ on a testé et fonctionnel avec ces deux formats.
 
 
 
-
+#  Pour exécuter le serveur Doxygen et voir les documents générés, suivez ces étapes :
+python -m http.server
+#  Lancer un serveur pour voir la documentation :
+Ouvrez votre navigateur et allez à l'adresse http://localhost:8000 pour voir la documentation.
 
 
 
