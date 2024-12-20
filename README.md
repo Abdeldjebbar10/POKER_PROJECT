@@ -130,7 +130,11 @@ source env/bin/activate
 pip install -r requirements.txt
 
 # Configurez la base de données
-python manage.py migrate
+
+python manage.py makemigrations
+
+python manage.py migrate    
+
 python manage.py createsuperuser  # Optionnel
 
 # Lancez le serveur
