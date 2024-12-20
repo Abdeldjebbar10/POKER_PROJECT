@@ -113,7 +113,19 @@ python -m http.server
 Ouvrez votre navigateur et allez à l'adresse http://localhost:8000/docs pour voir la documentation.
 
 
+Rapport du Projet
+Un document intitulé Rapport_CAP est inclus dans ce projet. Il s'agit d'un rapport détaillé qui présente tous les aspects du développement de l'application. Ce rapport couvre les points suivants :
 
+Introduction et présentation du projet : Objectifs, méthodologie et contexte.
+Justification des choix techniques : Architecture, langage, et conception des classes.
+Modélisation et diagrammes UML : Diagrammes de cas d'utilisation, de classes, et de séquence.
+Intégration continue (CI) : Explication de la configuration des workflows avec GitHub Actions.
+Tests et validation : Méthodologie des tests unitaires et résultats obtenus.
+Documentation générée : Utilisation de Doxygen pour produire une documentation technique complète.
+Accès au Rapport
+Le fichier Rapport CAP se trouve dans le répertoire du projet sous le nom :
+
+rapport_CAP.pdf
 
 
 
