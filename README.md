@@ -113,6 +113,9 @@ python -m http.server
 Ouvrez votre navigateur et allez à l'adresse http://localhost:8000/docs pour voir la documentation.
 
 
+
+****************************
+
 Rapport du Projet
 Un document intitulé Rapport_CAP est inclus dans ce projet. Il s'agit d'un rapport détaillé qui présente tous les aspects du développement de l'application. Ce rapport couvre les points suivants :
 
@@ -126,11 +129,6 @@ Accès au Rapport
 Le fichier Rapport CAP se trouve dans le répertoire du projet sous le nom :
 
 rapport_CAP.pdf
-
-
-
-
-
 
 
 
