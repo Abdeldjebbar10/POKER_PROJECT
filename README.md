@@ -78,10 +78,10 @@ pip install django-widget-tweaks
 python manage.py collectstatic
 
 
+########################################################################
 
 
-
-<!-- # Application Web Planning Poker
+# Application Web Planning Poker
 
 Cette application permet de jouer au **Planning Poker** en ligne, permettant à plusieurs participants d'estimer la difficulté des fonctionnalités d'un projet. Les règles sont flexibles (strict, moyenne, médiane, etc.) et l'application génère un fichier JSON avec les résultats à la fin.
 
