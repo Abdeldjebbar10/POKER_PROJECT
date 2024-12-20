@@ -97,31 +97,37 @@ Cette application permet de jouer au **Planning Poker** en ligne, permettant à 
 
 ## Installation
 
-Instructions pour exécuter le projet Django
-Prérequis
-1-Assurez-vous que les éléments suivants sont installés sur la machine :
-Python (version 3.7 ou plus récente).
-pip (le gestionnaire de paquets Python).
-virtualenv (optionnel mais recommandé).
-2-Téléchargez ou clonez le projet depuis GitHub :
+# **Instructions pour exécuter le projet Django**
+
+## **Prérequis**
+
+1. Assurez-vous que les éléments suivants sont installés sur votre machine :
+   - **Python** (version 3.7 ou plus récente)
+   - **pip** (le gestionnaire de paquets Python)
+   - **virtualenv** (optionnel mais recommandé)
+
+2. Téléchargez ou clonez le projet depuis GitHub :
+   ```bash
+   git clone https://github.com/Abdeldjebbar10/POKER_PROJECT.git
+   cd POKER_PROJECT
+# Clonez le dépôt
 git clone https://github.com/Abdeldjebbar10/POKER_PROJECT.git
 cd POKER_PROJECT
-Étape 1 : Créer et activer un environnement virtuel
-python -m venv env
-Activez l'environnement virtuel :
 
-Sur Windows :env\Scripts\activate
-Sur macOS/Linux :source env/bin/activate
-Étape 2 : Installer les dépendances : pip install -r requirements.txt
-Étape 3 : Configurer la base de données
-1-Appliquez les migrations pour configurer la base de données :
+# Créez et activez l'environnement virtuel
+python -m venv env
+source env/bin/activate  # ou env\Scripts\activate pour Windows
+
+# Installez les dépendances
+pip install -r requirements.txt
+
+# Configurez la base de données
 python manage.py migrate
-2-(Optionnel) Si vous souhaitez initialiser un utilisateur administrateur, utilisez :
-python manage.py createsuperuser
-Étape 4 : Démarrer le serveur
+python manage.py createsuperuser  # Optionnel
+
+# Lancez le serveur
 python manage.py runserver
-Accédez à votre application dans un navigateur web à l'adresse :
-http://127.0.0.1:8000.
+
 
 
 
