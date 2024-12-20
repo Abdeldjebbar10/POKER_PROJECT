@@ -57,8 +57,32 @@ python manage.py createsuperuser  # Optionnel
 # Lancez le serveur
 python manage.py runserver
 
+Ajout de fichiers pour la création de parties
+Lors de la création d'une partie, il est nécessaire d'uploader un fichier .JSON ou txt contenant les détails des fonctionnalités. Par exemple :
 
+[
+    {
+        "id": 20,
+        "name": "Authentification des utilisateurs (-_-)",
+        "description": "Permettre à un utilisateur de se connecter avec un email et un mot de passe (-_-)."
+    },
+    {
+        "id": 21,
+        "name": "Création d'une page de profil (-_-)",
+        "description": "Permettre aux utilisateurs de visualiser et modifier leurs informations personnelles (-_-)."
+    },
+    {
+        "id": 22,
+        "name": "Gestion des notifications (-_-)",
+        "description": "Envoyer des notifications par email aux utilisateurs pour les événements importants (-_-)."
+    }
+]
 
+Vous pouvez utiliser des fichiers avec les extensions suivantes :
+
+.js
+.txt
+on a testé et fonctionnel avec ces deux formats.
 
 
 
