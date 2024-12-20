@@ -115,9 +115,11 @@ git clone https://github.com/Abdeldjebbar10/POKER_PROJECT.git
 cd POKER_PROJECT
 
 # Créez et activez l'environnement virtuel
-python -m venv env
-source env/bin/activate  #
-ou env\Scripts\activate pour Windows
+Sur Windows :  
+env\Scripts\activate  
+Sur macOS/Linux :  
+source env/bin/activate
+
 
 # Installez les dépendances
 pip install -r requirements.txt
