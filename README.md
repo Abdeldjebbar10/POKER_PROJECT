@@ -107,7 +107,7 @@ on a testé et fonctionnel avec ces deux formats.
 #  Pour exécuter le serveur Doxygen et voir les documents générés, suivez ces étapes :
 python -m http.server
 #  Lancer un serveur pour voir la documentation :
-Ouvrez votre navigateur et allez à l'adresse http://localhost:8000 pour voir la documentation.
+Ouvrez votre navigateur et allez à l'adresse http://localhost:8000/docs pour voir la documentation.
 
 
 
