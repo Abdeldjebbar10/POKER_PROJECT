@@ -116,7 +116,7 @@ Ouvrez votre navigateur et allez à l'adresse http://localhost:8000/docs pour vo
 
 ****************************
 
-Rapport du Projet
+
 Un document intitulé Rapport_CAP est inclus dans ce projet. Il s'agit d'un rapport détaillé qui présente tous les aspects du développement de l'application. Ce rapport couvre les points suivants :
 
 Introduction et présentation du projet : Objectifs, méthodologie et contexte.
